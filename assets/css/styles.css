@@ -1,10 +1,10 @@
 /* ---------- Tokens ---------- */
 :root {
-  --bg: #fbfaf7;
-  --surface: #ffffff;
-  --text: #1c1d1f;
+  --bg: #ffffff;
+  --surface: #fafafa;
+  --text: #111111;
   --muted: #5d6066;
-  --line: #e6e3dc;
+  --line: #e5e5e5;
   --accent: #0f6e66;
   --accent-soft: #e3f1ef;
   --radius: 10px;
@@ -13,17 +13,6 @@
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #141517;
-    --surface: #1c1e21;
-    --text: #e9e8e4;
-    --muted: #a0a3a8;
-    --line: #2d3034;
-    --accent: #5cc2b6;
-    --accent-soft: #1d3330;
-  }
-}
 
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
