@@ -3,3 +3,9 @@ description: Engineering manager focused on data and platforms.
 url: https://lgonzalezalo.github.io
 permalink: /:year/:month/:day/:title/
 markdown: kramdown
+ 
+plugins:
+  - jekyll-github-metadata
+ 
+# Public repositories that should not appear under "Projects"
+hidden_repos: []
