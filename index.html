@@ -1,0 +1,113 @@
+---
+layout: null
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Luis González Alonso</title>
+    <meta
+      name="description"
+      content="Engineering manager focused on data and platforms. Technical write-ups on search, text classification, local LLMs and applied ML."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap"
+    />
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
+  </head>
+
+  <body>
+    <main>
+      <header class="site-header">
+        <h1>Luis González Alonso</h1>
+
+        <p class="role">
+          I'm an engineering manager focused on data and platforms, leading data,
+          infrastructure and operations teams.
+        </p>
+
+        <p class="lead">
+          Most recently I led Data Engineering, Data Science and Analytics
+          (15 people) at
+          <a href="https://empathy.co/" target="_blank" rel="noopener noreferrer">Empathy.co</a>,
+          an enterprise search and discovery platform for e-commerce, where I
+          also coordinated the company's first generative-AI projects. Before
+          that, I worked at Dell and ABN AMRO, and at CSC and DXC Technology I
+          led teams of up to 120 people serving international clients.
+        </p>
+
+        <p class="lead">
+          This site collects technical write-ups and notes from hands-on
+          projects: search and relevance, text classification, local LLMs and
+          applied ML. Where possible, I back conclusions with a reproducible
+          benchmark, and the code is on GitHub.
+        </p>
+
+        <p class="availability">
+          Open to leadership roles in engineering, data &amp; AI, and delivery ·
+          Remote from Asturias, Spain.
+        </p>
+
+        <nav class="links" aria-label="Professional links">
+          <a
+            class="primary-link"
+            href="https://www.linkedin.com/in/luis-gonzalez-alonso-99b1763a"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/lgonzalezalo"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+        </nav>
+      </header>
+
+      <section aria-labelledby="writing-title">
+        <h2 id="writing-title">Writing</h2>
+
+        <ul class="posts">
+          {% for post in site.posts %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            {% if post.subtitle %}<p>{{ post.subtitle }}</p>{% endif %}
+            <small>{{ post.date | date: "%B %Y" }}</small>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section aria-labelledby="projects-title">
+        <h2 id="projects-title">Projects</h2>
+
+        <ul class="projects">
+          <li>
+            <a href="https://github.com/lgonzalezalo/career-master">career-master</a>
+            <p>Claude plugin to build a verified career master and CVs you can defend.</p>
+          </li>
+          <li>
+            <a href="https://github.com/lgonzalezalo/zero-results-classifier">zero-results-classifier</a>
+            <p>Cascade classifier that routes zero-result ecommerce searches to the right customer-service page. Benchmark of three architectures.</p>
+          </li>
+          <li>
+            <a href="https://lgonzalezalo.github.io/tsql-genetic-algorithm-retrospective/">T-SQL genetic algorithm</a>
+            <p>Technical retrospective of a genetic algorithm written in T-SQL: what it still teaches and what I would change today.</p>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      <small>© 2026 Luis González · Built with GitHub Pages</small>
+    </footer>
+  </body>
+</html>
