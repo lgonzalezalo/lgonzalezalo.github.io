@@ -89,18 +89,15 @@ layout: null
         <h2 id="projects-title">Projects</h2>
 
         <ul class="projects">
+          {% assign repos = site.github.public_repositories | where: "fork", false | sort: "pushed_at" | reverse %}
+          {% for repo in repos %}
+          {% unless site.hidden_repos contains repo.name or repo.name == "lgonzalezalo.github.io" %}
           <li>
-            <a href="https://github.com/lgonzalezalo/career-master">career-master</a>
-            <p>Claude plugin to build a verified career master and CVs you can defend.</p>
+            <a href="{{ repo.html_url }}">{{ repo.name }}</a>
+            {% if repo.description %}<p>{{ repo.description }}</p>{% endif %}
           </li>
-          <li>
-            <a href="https://github.com/lgonzalezalo/zero-results-classifier">zero-results-classifier</a>
-            <p>Cascade classifier that routes zero-result ecommerce searches to the right customer-service page. Benchmark of three architectures.</p>
-          </li>
-          <li>
-            <a href="https://lgonzalezalo.github.io/tsql-genetic-algorithm-retrospective/">T-SQL genetic algorithm</a>
-            <p>Technical retrospective of a genetic algorithm written in T-SQL: what it still teaches and what I would change today.</p>
-          </li>
+          {% endunless %}
+          {% endfor %}
         </ul>
       </section>
 
