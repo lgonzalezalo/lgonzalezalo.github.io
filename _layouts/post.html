@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }} · Luis González</title>
+    <meta name="description" content="{{ page.description | default: page.subtitle }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap"
+    />
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
+  </head>
+
+  <body>
+    <main>
+      <a class="back" href="{{ '/' | relative_url }}">← Luis González</a>
+
+      <article>
+        <header>
+          <h1>{{ page.title }}</h1>
+          {% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}
+          <p class="meta">{{ page.date | date: "%-d %B %Y" }}</p>
+        </header>
+
+        {{ content }}
+      </article>
+    </main>
+
+    <footer>
+      <small>© 2026 Luis González · Built with GitHub Pages</small>
+    </footer>
+  </body>
+</html>
