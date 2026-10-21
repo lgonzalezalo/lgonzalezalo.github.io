@@ -1,11 +1,13 @@
 title: Luis González Alonso
 description: Engineering manager focused on data and platforms.
 url: https://lgonzalezalo.github.io
+image: /portfolio_card.png
 permalink: /:year/:month/:day/:title/
 markdown: kramdown
  
 plugins:
   - jekyll-github-metadata
+  - jekyll-seo-tag
  
 # Public repositories that should not appear under "Projects"
 hidden_repos: []
